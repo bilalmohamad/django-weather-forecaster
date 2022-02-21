@@ -1,0 +1,54 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Weather Forecaster</h1>
+    <p>Welcome to Weather Forecaster, a webpage developed by <b>Bilal Mohamad</b></p>
+    <div class="weather-info">
+        <div class="current-forecast">
+            <h2 class="header2">The Current Forecast in <u> {{ name }} </u></h2>
+            <ul class="list">
+                <li><strong>Location:</strong> {{ name }} </li>
+                <li><strong>Description:</strong> {{ description }} </li>
+                <li><strong>Temperature:</strong> {{ temp }} </li>
+                <li><strong>Today's High Temperature:</strong> {{ temp_max }} </li>
+                <li><strong>Today's Low Temperature:</strong> {{ temp_min }} </li>
+            </ul>   
+
+            <ul id="extraList" class="extraList">
+                <li><strong>Wind Speed:</strong> {{ wind }} </li>
+                <li><strong>Humidity:</strong> {{ humidity }} </li>
+                <li><strong>Pressure:</strong> {{ pressure }} </li>
+                <li><strong>Sunrise Time:</strong> {{ sunrise }} </li>
+                <li><strong>Sunset Time:</strong> {{ sunset }} </li>
+            </ul>
+        </div>
+
+        <button id="expand">More</button>
+        </div>
+        
+        <div class="chart">
+            <img src="data:image/png;base64,{{ graph }}" class="image">
+        </div>
+
+        <p class="result"></p>
+
+        <!-- <img alt="Clouds" src="https://images.unsplash.com/photo-1498496294664-d9372eb521f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3870&q=80"> -->
+    </div>
+
+    <script>
+        var expand = document.getElementById("expand");
+        document.getElementById('expand').addEventListener('click', hideData);
+
+        function hideData(){
+            if (extraList.style.display === "none"){
+                extraList.style.display = "block";
+                expand.innerHTML = "Less";
+            }
+            else{
+                extraList.style.display = "none";
+                expand.innerHTML = "More";
+            }
+        }
+    </script> 
+
+{% endblock %}

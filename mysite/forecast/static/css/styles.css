@@ -1,0 +1,42 @@
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+/* .col-sm-1 {
+    background-color: lightblue;
+} 
+.col-sm-10 {
+    background-color: white;
+    text-align: center;
+} */
+.chart {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image {
+    width: 100%
+}
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+.extraList {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+}
+.header2 {
+    text-align: center;
+}
+.weather-info {
+    text-align: center;
+}
+.current-forecast {
+    text-align: center;
+}
+/* .row {
+    background-color: lightblue;
+} */
