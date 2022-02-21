@@ -5,14 +5,15 @@
 }
 /* .col-sm-1 {
     background-color: lightblue;
-} 
+}  */
 .col-sm-10 {
+    margin-top: 25px;
     background-color: white;
     text-align: center;
-} */
+}
 .chart {
     text-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
 }
