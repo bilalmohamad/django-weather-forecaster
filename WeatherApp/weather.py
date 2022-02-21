@@ -1,12 +1,9 @@
 import requests
 import json
 import matplotlib.pyplot as plt
-import calendar
 import base64
 import io
-import urllib
 
-from io import StringIO
 from datetime import datetime
 
 apiKey = "80aef63b731dac4699efe44ff5ebfed3"
