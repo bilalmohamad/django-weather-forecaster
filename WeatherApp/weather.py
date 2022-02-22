@@ -6,13 +6,16 @@ import io
 
 from datetime import datetime
 
+# Weather API Key
 apiKey = "80aef63b731dac4699efe44ff5ebfed3"
 
+# Converts the utc time to the correct timezone of the location based on the offset
 def convert_time_to_timezone(utc, tz_offset):
     time = utc + tz_offset
     time = datetime.utcfromtimestamp(time).strftime('%I:%M %p')
     return (time)
 
+# Converts the utc time to the day of the week
 def convert_time_to_day(utc, tz_offset):
     time = utc + tz_offset
     day = datetime.utcfromtimestamp(time).strftime("%A")
@@ -31,6 +34,7 @@ def get_current_forecast(lat, lon):
     # Converts the JSON string created from the API call and converts it into a dictionary
     data = json.loads(response.content)
     
+    # A dictionary containing all of the current weather data
     current_weather = {
         'name': data['name'],
         'description': data['weather'][0]['description'].title(),
@@ -80,6 +84,7 @@ def get_weekly_forecast(lat, lon):
         temp_min.append(day['temp']['min'])
         description.append(day['weather'][0]['description'].title())
 
+    # Creates the 2-line plot with a legend
     plt.figure(figsize=(12,4))
     plt.plot(day_of_week, temp_max, label = "Highs")
     plt.plot(day_of_week, temp_min, label = "Lows")
@@ -88,6 +93,7 @@ def get_weekly_forecast(lat, lon):
     plt.title('7-Day Forecast')
     plt.legend()
 
+    # Encodes the plot so that it may be output to the UI
     flike = io.BytesIO()
     plt.savefig(flike)
     b64 = base64.b64encode(flike.getvalue()).decode()
