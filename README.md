@@ -2,6 +2,8 @@
 This application was created using the Django framework!
 To run this application, you first must ensure that Python is installed on your computer.
 
+![alt text](https://user-images.githubusercontent.com/52009867/155070054-34e9c108-2833-4dfd-8a8c-4ee71f72833e.png)
+
 ## Make the project
 This project can be cloned by running the following command:
 ```
