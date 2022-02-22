@@ -40,3 +40,8 @@ Then run the following command:
 ```
 python manage.py runserver
 ```
+
+Open a web browser and enter the url:
+```
+localhost:8000
+```
