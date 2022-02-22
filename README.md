@@ -26,4 +26,17 @@ virtualenv env
 ```
 
 ## Installing Dependencies
-To install the required dependencies needed to run the project, run the following command while in the 
+To install the required dependencies needed to run the project, ensure that the current directory is .../django-weather-forecaster/WeatherApp/
+
+Then run the following command:
+```
+pip install -r requirements.txt
+```
+
+## Running the Project
+To run the project, make sure the current directory is .../django-weather-forecaster/WeatherApp/
+
+Then run the following command:
+```
+python manage.py runserver
+```
